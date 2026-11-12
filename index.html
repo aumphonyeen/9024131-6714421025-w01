@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#e94b91">
+    <title>ตรวจสอบจบการศึกษา | RBRU</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="เมนูหลัก">
+        <a class="brand" href="#overview" aria-label="หน้าหลัก RBRU">
+          <span class="brand-mark" aria-hidden="true">RBRU</span>
+          <span class="brand-copy">
+            <strong>ระบบบริการการศึกษา</strong>
+            <small>มหาวิทยาลัยราชภัฏรำไพพรรณี</small>
+          </span>
+        </a>
+
+        <nav class="side-nav">
+          <a class="side-link" href="#overview">หน้าหลัก</a>
+          <a class="side-link" href="#student">ข้อมูลส่วนตัว</a>
+          <a class="side-link" href="#curriculum">ข้อมูลการศึกษา</a>
+          <a class="side-link active" href="#overview" aria-current="page">ตรวจสอบจบ</a>
+          <a class="side-link" href="#requirements">ผลการตรวจสอบ</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+        </div>
+      </aside>
+
+      <main class="main-content" id="overview">
+        <header class="topbar">
+          <div class="topbar-left">
+            <div class="breadcrumbs"><span>หน้าหลัก</span><span class="crumb-separator">›</span><strong>ตรวจสอบจบ</strong></div>
+          </div>
+          <div class="topbar-actions">
+            <span class="term-pill">ปีการศึกษา <strong id="top-term">—</strong></span>
+            <button class="avatar" type="button" aria-label="ข้อมูลนักศึกษา">น</button>
+          </div>
+        </header>
+
+        <div class="page-wrap">
+          <section class="page-heading" id="student">
+            <div>
+              <h1>ตรวจสอบจบการศึกษา</h1>
+            </div>
+            <div class="heading-actions">
+              <button class="button button-outline" id="download-json" type="button">ดาวน์โหลด JSON</button>
+              <button class="button button-primary" id="print-report" type="button">พิมพ์รายงาน</button>
+            </div>
+          </section>
+
+          <section class="student-card panel">
+            <div class="student-info">
+              <h2 id="student-name">กำลังโหลด...</h2>
+              <div class="student-meta">
+                <span>รหัสนักศึกษา <strong id="student-id">—</strong></span>
+                <span>หลักสูตร <strong id="program-name">—</strong></span>
+                <span>คณะ <strong id="faculty-name">—</strong></span>
+                <span>อาจารย์ที่ปรึกษา <strong id="advisor-name">—</strong></span>
+              </div>
+            </div>
+            <div class="student-term">
+              <span>ภาคการศึกษาที่ตรวจสอบ</span>
+              <strong id="student-term">—</strong>
+              <small id="student-status">—</small>
+            </div>
+          </section>
+
+          <section class="summary-grid" aria-label="สรุปผลการศึกษา">
+            <article class="summary-card credits-card">
+              <div class="summary-top">
+                <span class="summary-label">หน่วยกิตสะสม</span>
+              </div>
+              <div class="summary-value"><strong id="credits-earned">—</strong><span> / <span id="credits-required">—</span> หน่วยกิต</span></div>
+              <div class="progress-track" role="progressbar" aria-label="สัดส่วนหน่วยกิตสะสม" aria-valuemin="0" aria-valuemax="100">
+                <span id="credits-progress" aria-valuenow="0"></span>
+              </div>
+              <div class="summary-foot"><span>ขาดอีก <strong id="credits-remaining">—</strong> หน่วยกิต</span><span id="credits-percent">—</span></div>
+            </article>
+
+            <article class="summary-card gpa-card">
+              <div class="summary-top">
+                <span class="summary-label">ผลการเรียนเฉลี่ยสะสม</span>
+              </div>
+              <div class="summary-value"><strong id="gpax">—</strong><span> GPAX</span></div>
+              <div class="gpa-scale"><span>0.00</span><span class="gpa-indicator" id="gpa-indicator"></span><span>4.00</span></div>
+              <div class="summary-foot"><span id="gpa-message">—</span><span class="mini-check" id="gpa-check">✓</span></div>
+            </article>
+
+            <article class="summary-card requirements-card">
+              <div class="summary-top">
+                <span class="summary-label">เงื่อนไขการสำเร็จการศึกษา</span>
+              </div>
+              <div class="requirement-count"><strong id="requirements-passed">—</strong><span> / <span id="requirements-total">—</span> ผ่านแล้ว</span></div>
+              <div class="requirement-dots" id="requirement-dots" aria-hidden="true"></div>
+              <div class="summary-foot"><span id="requirements-message">—</span><span class="status-indicator" id="requirements-icon">!</span></div>
+            </article>
+          </section>
+
+          <section class="panel requirements-panel" id="requirements">
+            <div class="section-heading">
+              <div>
+                <h2>สถานะเงื่อนไขการจบ</h2>
+              </div>
+              <span class="panel-caption" id="requirements-caption">อัปเดตล่าสุด —</span>
+            </div>
+            <div class="requirement-list" id="requirement-list"></div>
+          </section>
+
+          <section class="panel curriculum-panel" id="curriculum">
+            <div class="section-heading curriculum-heading">
+              <div>
+                <h2>โครงสร้างหลักสูตร</h2>
+              </div>
+              <label class="search-box">
+                <span aria-hidden="true">⌕</span>
+                <input id="course-search" type="search" placeholder="ค้นหารายวิชา..." aria-label="ค้นหารายวิชา">
+              </label>
+            </div>
+            <div class="filter-row" id="category-filters" aria-label="กรองตามหมวดรายวิชา"></div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">รหัสวิชา</th>
+                    <th scope="col">ชื่อรายวิชา</th>
+                    <th scope="col">หมวดวิชา</th>
+                    <th scope="col">หน่วยกิต</th>
+                    <th scope="col">เกรด</th>
+                    <th scope="col">สถานะ</th>
+                  </tr>
+                </thead>
+                <tbody id="course-rows"></tbody>
+              </table>
+              <div class="empty-state" id="empty-state" hidden>ไม่พบรายวิชาที่ตรงกับคำค้น</div>
+            </div>
+            <div class="table-footer"><span id="course-count">—</span><span>แสดงเฉพาะรายวิชาตัวอย่างบางส่วน</span></div>
+          </section>
+
+          <footer class="page-footer">
+            <span>© สำนักส่งเสริมวิชาการและงานทะเบียน · มหาวิทยาลัยราชภัฏรำไพพรรณี</span>
+          </footer>
+        </div>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

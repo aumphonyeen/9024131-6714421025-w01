@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "1.0.0",
+  "isDemo": true,
+  "courseListIsPartial": true,
+  "lastChecked": "10 พฤศจิกายน 2569 เวลา 16:30 น.",
+  "student": {
+    "studentId": "671499999",
+    "name": "นางสาวตัวอย่าง ใจดี",
+    "year": 4,
+    "enrollmentStatus": "ภาคปกติ",
+    "advisor": "อาจารย์ตัวอย่าง ที่ปรึกษา"
+  },
+  "program": {
+    "faculty": "คณะวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ",
+    "name": "วิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ",
+    "level": "ปริญญาตรี (4 ปี)",
+    "academicYear": "2569",
+    "term": "ภาคการศึกษาที่ 1",
+    "curriculumYear": "2567"
+  },
+  "summary": {
+    "creditsRequired": 124,
+    "creditsEarned": 118,
+    "gpax": 2.84,
+    "minimumGpax": 2.00
+  },
+  "requirements": [
+    {
+      "id": "credits",
+      "name": "หน่วยกิตครบตามหลักสูตร",
+      "detail": "สะสม 118 จาก 124 หน่วยกิต · ขาดอีก 6 หน่วยกิต",
+      "status": "incomplete"
+    },
+    {
+      "id": "gpax",
+      "name": "ผลการเรียนเฉลี่ยสะสม",
+      "detail": "GPAX 2.84 (เกณฑ์ขั้นต่ำ 2.00)",
+      "status": "passed"
+    },
+    {
+      "id": "general-education",
+      "name": "หมวดวิชาศึกษาทั่วไป",
+      "detail": "ครบ 30 จาก 30 หน่วยกิต",
+      "status": "passed"
+    },
+    {
+      "id": "major",
+      "name": "หมวดวิชาเฉพาะ",
+      "detail": "ผ่าน 82 จาก 88 หน่วยกิต",
+      "status": "incomplete"
+    },
+    {
+      "id": "english",
+      "name": "ผลการทดสอบภาษาอังกฤษ",
+      "detail": "ยังไม่ได้ยื่นผลการทดสอบ",
+      "status": "incomplete"
+    },
+    {
+      "id": "conduct",
+      "name": "สถานภาพและวินัยนักศึกษา",
+      "detail": "ผ่านเกณฑ์",
+      "status": "passed"
+    }
+  ],
+  "courses": [
+    {
+      "code": "GEN1101",
+      "name": "ภาษาไทยเพื่อการสื่อสาร",
+      "category": "หมวดวิชาศึกษาทั่วไป",
+      "credits": 3,
+      "grade": "A",
+      "status": "passed"
+    },
+    {
+      "code": "GEN1102",
+      "name": "ภาษาอังกฤษเพื่อการสื่อสาร",
+      "category": "หมวดวิชาศึกษาทั่วไป",
+      "credits": 3,
+      "grade": "B+",
+      "status": "passed"
+    },
+    {
+      "code": "GEN1204",
+      "name": "พลเมืองดิจิทัล",
+      "category": "หมวดวิชาศึกษาทั่วไป",
+      "credits": 3,
+      "grade": "A",
+      "status": "passed"
+    },
+    {
+      "code": "GEN1305",
+      "name": "การคิดเชิงสร้างสรรค์",
+      "category": "หมวดวิชาศึกษาทั่วไป",
+      "credits": 3,
+      "grade": "B",
+      "status": "passed"
+    },
+    {
+      "code": "GEN1402",
+      "name": "สุขภาวะและการออกกำลังกาย",
+      "category": "หมวดวิชาศึกษาทั่วไป",
+      "credits": 3,
+      "grade": "A",
+      "status": "passed"
+    },
+    {
+      "code": "ITC2101",
+      "name": "การเขียนโปรแกรมคอมพิวเตอร์",
+      "category": "หมวดวิชาเฉพาะ",
+      "credits": 3,
+      "grade": "B+",
+      "status": "passed"
+    },
+    {
+      "code": "ITC2203",
+      "name": "โครงสร้างข้อมูลและอัลกอริทึม",
+      "category": "หมวดวิชาเฉพาะ",
+      "credits": 3,
+      "grade": "B",
+      "status": "passed"
+    },
+    {
+      "code": "ITC3105",
+      "name": "การพัฒนาเว็บแอปพลิเคชัน",
+      "category": "หมวดวิชาเฉพาะ",
+      "credits": 3,
+      "grade": "A",
+      "status": "passed"
+    },
+    {
+      "code": "ITC3207",
+      "name": "ฐานข้อมูลและการออกแบบระบบ",
+      "category": "หมวดวิชาเฉพาะ",
+      "credits": 3,
+      "grade": "B+",
+      "status": "passed"
+    },
+    {
+      "code": "ITC4109",
+      "name": "โครงงานเทคโนโลยีสารสนเทศ",
+      "category": "หมวดวิชาเฉพาะ",
+      "credits": 3,
+      "grade": "—",
+      "status": "pending"
+    },
+    {
+      "code": "ITC4110",
+      "name": "สัมมนาทางเทคโนโลยีสารสนเทศ",
+      "category": "หมวดวิชาเฉพาะ",
+      "credits": 1,
+      "grade": "—",
+      "status": "pending"
+    },
+    {
+      "code": "FRE2001",
+      "name": "การถ่ายภาพดิจิทัล",
+      "category": "หมวดวิชาเลือกเสรี",
+      "credits": 3,
+      "grade": "A",
+      "status": "passed"
+    },
+    {
+      "code": "FRE2002",
+      "name": "การออกแบบสื่อสร้างสรรค์",
+      "category": "หมวดวิชาเลือกเสรี",
+      "credits": 3,
+      "grade": "B+",
+      "status": "passed"
+    }
+  ]
+}
